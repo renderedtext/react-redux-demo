@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { SET_PEOPLE,
-         SET_SELECTED_PERSON } from './actionTypes';
+         SET_SELECTED_PERSON,
+         REMOVE_PERSON } from './actionTypes';
 
 export const setPeople = people => {
   return {
@@ -13,6 +14,13 @@ export const setSelectedPerson = selectedPerson => {
   return {
     type: SET_SELECTED_PERSON,
     selectedPerson
+  };
+};
+
+export const removePerson = index => {
+  return {
+    type: REMOVE_PERSON,
+    index
   };
 };
 

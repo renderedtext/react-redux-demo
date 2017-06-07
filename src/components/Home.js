@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 class Home extends Component {
   render() {
     return (
-      <p>Home</p>
+      <div>
+        <p>Home</p>
+        <Link to='people'>People</Link>
+        <Link to='planets'>Planets</Link>
+      </div>
     );
   }
 }

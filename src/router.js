@@ -15,17 +15,17 @@ import PlanetDetails from './components/planets/PlanetDetails';
 const router = (
   <Router history={ browserHistory } >
 
-    <Route path='Home' component={ Home } />
+      <Route path='/' component={ Home } />
 
-    <Route path='people' >
-      <IndexRoute component={ PeopleList } />
-      <Route path=':id' component={ PersonDetails } />
-    </Route>
+      <Route path='people' >
+        <IndexRoute component={ PeopleList } />
+        <Route path=':id' component={ PersonDetails } />
+      </Route>
 
-    <Route path='planets' >
-      <IndexRoute component={ PlanetsList } />
-      <Route path=':id' component={ PlanetDetails } />
-    </Route>
+      <Route path='planets' >
+        <IndexRoute component={ PlanetsList } />
+        <Route path=':id' component={ PlanetDetails } />
+      </Route>
 
   </Router>
 );
