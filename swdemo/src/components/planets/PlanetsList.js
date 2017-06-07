@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import store from '../../store';
+import { getPlanets } from '../../actions/planetsActions';
+
 import PlanetItem from './PlanetItem';
 
 class PlanetsList extends Component {
+  componentDidMount() {
+    store.dispatch(getPlanets());
+  }
+
   render() {
-    const planets = [];
+    const planets = this.props.planets;
     return (
       <ul>
         {
@@ -21,4 +28,10 @@ class PlanetsList extends Component {
   }
 }
 
-export default PlanetsList;
+const mapStateToProps = store => {
+  return {
+    planets: store.planetsState.planets
+  };
+};
+
+export default connect(mapStateToProps)(PlanetsList);
