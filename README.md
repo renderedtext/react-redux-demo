@@ -1,3 +1,77 @@
+### Introduction to React
+
+React makes it painless to create interactive UIs.
+
+Component based.
+
+
+#### props
+
+```javascript
+// book.js
+import React from "react";
+
+class Book extends React.Component {
+  render() {
+    return (
+      <h1>{ this.props.title }</h1>
+    );
+  }
+}
+
+export default Book;
+```
+
+```javascript
+// book_list.js
+import React from "react";
+
+class BookList extends React.Component {
+  render() {
+    return (
+      { this.props.books.map((book) => {
+          <Book title={ book.title } />
+        })
+      }
+    );
+  }
+}
+
+export default BookList;
+```
+
+#### state
+
+```javascript
+// book_list.js
+import React from "react";
+
+class BookList extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      books: [{ id: 1, title: "Awesome book" },
+              { id: 2, title: "Programming JS" }]
+    };
+  }
+
+  render() {
+    return (
+      { this.state.books.map((book) => {
+          <Book
+            id={ book.id }
+            title={ book.title }
+          />
+        })
+      }
+    );
+  }
+}
+
+export default BookList;
+```
+
 ### Redux
 
 #### Core Concepts
