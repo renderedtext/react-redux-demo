@@ -18,7 +18,7 @@ class PersonItem extends Component {
 
   showDetails = () => {
     store.dispatch(setSelectedPerson(this.props.person));
-    browserHistory.push(`people/${this.props.index}`);
+    browserHistory.push(`/people/${this.props.index}`);
   }
 
   remove = () => {
