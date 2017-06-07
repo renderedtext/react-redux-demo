@@ -81,6 +81,9 @@ UNIDIRECTIONAL DATA FLOW
 3) Store saves calculated state
 4) Listeners get notified to update their data via `getState`
 
+![alt
+architecture](https://image.slidesharecdn.com/reactredux-160714200748/95/react-redux-13-638.jpg?cb=1468526913)
+
 #### Asynchronous Actions
 
 1) Making API requests in components and dispatching actions when response is
