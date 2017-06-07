@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 
 class PersonDetails extends Component {
   render() {
@@ -16,6 +17,7 @@ class PersonDetails extends Component {
         <p>{ person.hair_color }</p>
         <p>{ person.skin_color }</p>
 
+        <Link to='/people'>People</Link>
       </div>
     );
   }
