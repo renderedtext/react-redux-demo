@@ -6,15 +6,15 @@ class PersonDetails extends Component {
     const person = this.props.person;
     return (
       <div>
-        <h1>PersonDetails</h1>
+        <h1>Person Details</h1>
 
-        <p>{ person.name }</p>
-        <p>{ person.birth_year }</p>
-        <p>{ person.gender }</p>
-        <p>{ person.height }</p>
-        <p>{ person.mass }</p>
-        <p>{ person.hair_color }</p>
-        <p>{ person.skin_color }</p>
+        <p>Name: { person.name } </p>
+        <p>Birth year: { person.birth_year }</p>
+        <p>Gender: { person.gender }</p>
+        <p>Height: { person.height }</p>
+        <p>Mass: { person.mass }</p>
+        <p>Hair color: { person.hair_color }</p>
+        <p>Skin color: { person.skin_color }</p>
 
       </div>
     );

@@ -5,8 +5,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <p>Home</p>
+        <p>Star Wars info</p>
         <Link to='people'>People</Link>
+        <br/>
         <Link to='planets'>Planets</Link>
       </div>
     );

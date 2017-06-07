@@ -10,7 +10,8 @@ class PersonItem extends Component {
     const person = this.props.person;
     return (
       <li>
-        <p onClick={ this.showDetails }>{ person.name }</p>
+        <a onClick={ this.showDetails }>{ person.name }</a>
+        <br/>
         <button onClick={ this.remove }>Remove</button>
       </li>
     );
