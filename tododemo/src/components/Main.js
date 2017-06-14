@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import store from "../store";
+import { addTodo } from "../actions/todoActions";
+
 class Main extends Component {
   constructor() {
     super();
 
-    this.state = { todo: '' };
+    this.state = {
+      todo: ""
+    }
   }
 
   render() {
@@ -13,8 +18,8 @@ class Main extends Component {
     return (
       <div>
         <p>Todo List</p>
-        { todos.map(todo =>
-            <p>{ todo }</p>
+        { this.props.todos.map((todo, index) =>
+            <p key={ index }>{ todo }</p>
           )
         }
 
@@ -32,9 +37,16 @@ class Main extends Component {
   }
 
   addTodo = () => {
-    //TODO
-    this.setState({ todo: '' });
+    store.dispatch(
+      addTodo(this.state.todo)
+    );
   }
 }
 
-export default Main;
+const mapStateToProps = (store) => {
+  return {
+    todos: store.todos
+  }
+}
+
+export default connect(mapStateToProps)(Main);
